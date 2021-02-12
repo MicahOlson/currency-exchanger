@@ -4,9 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import ExchangeService from './services/exchange-service.js';
 
-function clearFields() {
+function clearPage() {
   $('#base-value').val('');
   $('#target-currency').val('');
+  $('.jumbotron').hide();
 }
 
 function getResult(response, baseValue) {
@@ -28,10 +29,11 @@ $(document).ready(function() {
     const baseCurrency = 'USD';
     const baseValue = parseFloat($('#base-value').val());
     const targetCurrency = $('#target-currency').val();
-    clearFields();
+    clearPage();
     ExchangeService.getExchange(baseCurrency, targetCurrency)
       .then(function(response) {
         getResult(response, baseValue);
       });
+    $('.jumbotron').show();
   });
 });
