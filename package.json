@@ -1,25 +1,17 @@
 {
   "name": "currency-exchanger",
   "version": "1.0.0",
+  "description": "Convert U.S. dollars to a different currency using the ExchangeRate-API.",
   "main": "main.js",
   "scripts": {
-    "buildSlim": "webpack --mode production",
     "build": "webpack --mode development",
     "start": "npm run build; webpack-dev-server --open --mode development",
-    "lint": "eslint src/js/*.js",
+    "lint": "eslint src/*.js",
     "test": "jest --coverage"
-  },
-  "jest": {
-    "collectCoverage": true,
-    "coverageReporters": [
-      "html",
-      "text"
-    ]
   },
   "keywords": [],
   "author": "Micah L. Olson",
   "license": "GPLv3",
-  "description": "convert a currency to different one using ExchangeRate-API",
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",
