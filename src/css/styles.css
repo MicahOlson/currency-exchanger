@@ -1,3 +1,11 @@
+h1, h2 {
+  text-align: center;
+}
+
 #btn-convert {
   float: right;
+}
+
+#results {
+  display: none;
 }

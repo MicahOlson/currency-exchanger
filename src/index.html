@@ -10,43 +10,47 @@
 
 <body>
   <div class="container">
-    <h1>Convert U.S. Dollars to Another Currency</h1>
-    <form id="value-and-target">
-      <div class="form-row">
-        <div class="form-group col-md-4">
-          <label for="amount">Amount</label>
-          <input type="number" class="form-control" id="base-value" min="0.00" step="0.01"
-            placeholder="Enter an amount">
-        </div>
-        <div class="form-group col-md-4">
-          <label for="base-currency">From</label>
-          <select class="custom-select" id="base-currency" disabled>
-            <option value="USD">USD - U.S. Dollar</option>
-          </select>
-        </div>
-        <div class="form-group col-md-4">
-          <div class="form-group">
-            <label for="target-currency">To</label>
-            <select class="custom-select" id="target-currency">
-              <option>Select a currency</option>
-              <option value="GBP">GBP - British Pound</option>
-              <option value="JPY">JPY - Japanese Yen</option>
-              <option value="EUR">EUR - Euro</option>
-              <option value="INR">INR - Indian Rupee</option>
-              <option value="NOK">NOK - Norwegian Krone</option>
+    <h1>Currency Exchanger</h1>
+    <h2><small>Convert U.S. Dollars to Another Currency</small></h2>
+    <div class="jumbotron">
+      <form id="value-and-target">
+        <div class="form-row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="amount">Amount</label>
+              <input type="number" class="form-control" id="base-value" min="0.00" step="0.01"
+                placeholder="Enter an amount">
+            </div>
+            <div id="results">
+              <h6 id="base-result"></h6>
+              <h3 id="target-result"></h3>
+            </div>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="base-currency">From</label>
+            <select class="custom-select" id="base-currency" disabled>
+              <option value="USD">USD - U.S. Dollar</option>
             </select>
           </div>
-          <div class="form-group">
-            <button type="submit" class="btn btn-primary" id="btn-convert">Convert</button>
+          <div class="form-group col-md-4">
+            <div class="form-group">
+              <label for="target-currency">To</label>
+              <select class="custom-select" id="target-currency">
+                <option>Select a currency</option>
+                <option value="GBP">GBP - British Pound</option>
+                <option value="JPY">JPY - Japanese Yen</option>
+                <option value="EUR">EUR - Euro</option>
+                <option value="INR">INR - Indian Rupee</option>
+                <option value="NOK">NOK - Norwegian Krone</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary" id="btn-convert">Convert</button>
+            </div>
           </div>
         </div>
-      </div>
-    </form>
-
-    <div id="result">
-      <!-- to be added by main.js -->
+      </form>
     </div>
-
   </div>
 </body>
 
