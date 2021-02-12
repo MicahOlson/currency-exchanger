@@ -17,43 +17,49 @@
 * ExchangeRate-API
 
 ## Description
-This website will convert U.S. dollars to a different global currency using the ExchangeRate-API. Enter a value in U.S. dollars, select a different, global currency and click submit.  
+This website will convert U.S. dollars to a different global currency using the ExchangeRate-API. Enter a value in U.S. dollars, select a different, global currency from the list provided and click submit.  
 
 ## Setup and Installation
-* This project's interactive web page can be viewed [here](https://micaholson.github.io/currency-exchanger).  
+* To use this application, you will need to **supply your own API key** for the ExchangeRate-API.
+  * Go to [ExchangeRate-API](https://www.exchangerate-api.com)'s website
+  * Input your email address and click "Get Free Key!"
+  * Complete the "Create Account" form by adding your first name and a password
+  * Read the terms of use and, to proceed further, check that you agree 
+  * Click "Create Account & API Key!"
+  * You will be redirected to your account dashboard, where you'll find 
+    * your unique API key (please keep this private and secure)
+    * the status of your monthly quota and usage information
 
-* To download, then view or edit a local copy yourself, follow the instructions below:  
+* After acquiring an API key, **clone this repository** to a local directory using the command-line tool `git` ([how to install git](https://www.learnhowtoprogram.com/introduction-to-programming/getting-started-with-intro-to-programming/git-and-github)).  
+  `$ cd ~/[directory]/[path]/[of]/[choice]/`  
+  `$ git clone https://github.com/MicahOlson/currency-exchanger.git`  
 
-  * Clone the repository to a local directory using the command-line tool `git` ([how to install git](https://www.learnhowtoprogram.com/introduction-to-programming/getting-started-with-intro-to-programming/git-and-github)).  
-    `$ cd ~/[directory]/[path]/[of]/[choice]/`  
-    `$ git clone https://github.com/MicahOlson/currency-exchanger.git`  
+* Navigate to the top level of the project directory.  
+  `$ cd currency-exchanger/`   
+
+* *ADD POINTS ABOUT API SIGN-UP, API KEY, CREATING .ENV, ADDING IT TO .GITIGNORE, ETC.*
+
+* *ADD A POINT ABOUT NODE*
+
+* Install all application dependencies using `npm` (node package manager) ([how to install npm](https://www.learnhowtoprogram.com/intermediate-javascript/getting-started-with-javascript/installing-node-js)).  
+  `$ npm install`
+
+* Then build a distribution bundle by running the following. This will create the version of `index.html` you will access as discussed below.  
+  `$ npm run build`
+
+* To view the site locally, start the preconfigured development server to automatically launch the site in your default browser.  
+  `$ npm run start`
   
-  * Navigate to the top level of the project directory.  
-    `$ cd currency-exchanger/`   
-  
-  * *ADD POINTS ABOUT API SIGN-UP, API KEY, CREATING .ENV, ADDING IT TO .GITIGNORE, ETC.*
-  
-  * *ADD A POINT ABOUT NODE*
-  
-  * Install all application dependencies using `npm` (node package manager) ([how to install npm](https://www.learnhowtoprogram.com/intermediate-javascript/getting-started-with-javascript/installing-node-js)).  
-    `$ npm install`
+  * You could also open the file called `index.html` in the project's `dist/` subdirectory to view a static version.  
+  `$ cd dist/`  
+  `$ open index.html`  
 
-  * Then build a distribution bundle by running the following. This will create the version of `index.html` you will access as discussed below.  
-    `$ npm run build`
+  * Alternatively, you can navigate to these project directories through your system's GUI file manager, then double-click `index.html` to open it in your default browser.  
 
-  * To view the site locally, start the preconfigured development server to automatically launch the site in your default browser.  
-    `$ npm run start`
-    
-    * You could also open the file called `index.html` in the project's `dist/` subdirectory to view a static version.  
-    `$ cd dist/`  
-    `$ open index.html`  
-
-    * Alternatively, you can navigate to these project directories through your system's GUI file manager, then double-click `index.html` to open it in your default browser.  
-
-  * To edit the project, open the files in your preferred code editor. Here are some recommendations:
-    * [Visual Studio Code](https://code.visualstudio.com) - "Code editing. Redefined."
-    * [Atom](https://atom.io) - "A hackable text editor for the 21st Century"
-    * [SublimeText](https://www.sublimetext.com) - "A sophisticated text editor for code, markup and prose"  
+* To edit the project, open the files in your preferred code editor. Here are some recommendations:
+  * [Visual Studio Code](https://code.visualstudio.com) - "Code editing. Redefined."
+  * [Atom](https://atom.io) - "A hackable text editor for the 21st Century"
+  * [SublimeText](https://www.sublimetext.com) - "A sophisticated text editor for code, markup and prose"  
 
 ## Known Bugs
 * No known bugs.
