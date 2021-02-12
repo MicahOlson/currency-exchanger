@@ -14,6 +14,7 @@
 * npm 6.14.10
 * webpack 4.39.3
 * ESLint 6.3.1
+* Markdown 1.0.1
 * ExchangeRate-API
 
 ## Description
@@ -21,55 +22,55 @@ This website will convert U.S. dollars to a different global currency using the 
 
 ## Setup and Installation
 * To use this application, you will need to **acquire your own API key** for the ExchangeRate-API.
-  * Go to [ExchangeRate-API](https://www.exchangerate-api.com)'s website
-  * Input your email address and click "Get Free Key!"
-  * Complete the "Create Account" form by adding your first name and a password
-  * Read the terms of use and, to proceed further, check that you agree 
-  * Click "Create Account & API Key!"
-  * You will be redirected to your account dashboard, where you'll find 
-    * your unique API key (please keep this private and secure)
-    * the status of your monthly quota and usage information
+  - Go to the [ExchangeRate-API](https://www.exchangerate-api.com) website
+  - Input your email address and click "Get Free Key!"
+  - Complete the "Create Account" form by adding your first name and a password
+  - Read the terms of use and, to proceed further, check that you agree
+  - Click "Create Account & API Key!"
+  - You will be redirected to your account dashboard, where you'll find
+    - your unique API key (please keep this private and secure)
+    - the status of your monthly quota and usage information
 
 * After acquiring an API key, **clone this repository** to a local directory using the command-line tool `git` ([how to install git](https://www.learnhowtoprogram.com/introduction-to-programming/getting-started-with-intro-to-programming/git-and-github)).  
-  `$ cd ~/[directory]/[path]/[of]/[choice]/`  
-  `$ git clone https://github.com/MicahOlson/currency-exchanger.git`  
+  >`$ cd ~/[directory]/[path]/[of]/[choice]/`  
+  >`$ git clone https://github.com/MicahOlson/currency-exchanger.git`  
 
-* **Navigate into the project**. Use `cd` to move to the top level of the project directory.  
-  `$ cd currency-exchanger/`   
+* **Navigate into the project** using `cd` to move to the top level of the project directory.  
+  >`$ cd currency-exchanger/`   
 
-* **Make your API key available to the application** and help **keep it secure** by excluding it from `git` tracking.
-  * Create a file called `.env` that holds your key. This can be done with the single command below, replacing the content in brackets with your API key and removing the brackets.  
-    `$ echo "API_KEY=[your-API-key-without-brackets]" > .env`
-  * Add `.env` to the project's `.gitignore` file. Note the use of two angled brackets here `>>` to append the `.gitignore` file, not overwrite it.  
-    `$ echo .env >> .gitignore`  
+* **Make your API key available to the application** and help **keep it secure** by excluding it from `git` tracking and from being pushed to remote repositories.  
+  - Create a file called `.env` that holds your key. This can be done with the single command below, replacing the content in brackets with your API key and removing the brackets  
+    >`$ echo "API_KEY=[your-API-key-without-brackets]" > .env`  
+  - Add `.env` to the project's `.gitignore` file. Note the use of two angled brackets (`>>`) here to append the `.gitignore` file and not overwrite it  
+    >`$ echo .env >> .gitignore`  
 
-* **Install all application dependencies** using `node` and `npm` (node package manager) ([how to install node and npm](https://www.learnhowtoprogram.com/intermediate-javascript/getting-started-with-javascript/installing-node-js)).  
-  `$ npm install`
+* **Install all packages and dependencies** listed in `package.json` using `node` and its package manager `npm` ([how to install node and npm](https://www.learnhowtoprogram.com/intermediate-javascript/getting-started-with-javascript/installing-node-js)).  
+  >`$ npm install`  
 
 * Then **build a distribution bundle** by running the following. This will create the version of `index.html` you will access as discussed below.  
-  `$ npm run build`
+  >`$ npm run build`  
 
 * To view the site locally, **start the preconfigured development server** to automatically launch the site in your default browser.  
-  `$ npm run start`
+  >`$ npm run start`  
   
-  * You could also open the file called `index.html` in the project's `dist/` subdirectory to view a static version.  
-  `$ cd dist/`  
-  `$ open index.html`  
+  - You could also open the file called `index.html` in the project's `dist/` subdirectory to view a static version  
+  >`$ cd dist/`  
+  >`$ open index.html`  
 
-  * Alternatively, you can navigate to these project directories through your system's GUI file manager, then double-click `index.html` to open it in your default browser.  
+  - Alternatively, you can navigate to these project directories through your system's GUI file manager, then double-click `index.html` to open it in your default browser  
 
-* To edit the project, open the files in your preferred code editor. Here are some recommendations:
-  * [Visual Studio Code](https://code.visualstudio.com) - "Code editing. Redefined."
-  * [Atom](https://atom.io) - "A hackable text editor for the 21st Century"
-  * [SublimeText](https://www.sublimetext.com) - "A sophisticated text editor for code, markup and prose"  
+* To edit the project, open the files in your preferred code editor. Here are some recommendations:  
+  - [Visual Studio Code](https://code.visualstudio.com) - "Code editing. Redefined."  
+  - [Atom](https://atom.io) - "A hackable text editor for the 21st Century"  
+  - [SublimeText](https://www.sublimetext.com) - "A sophisticated text editor for code, markup and prose"  
 
 ## Known Bugs
-* No known bugs.
-* If you find a bug, please report it to me at the email address below.
+* No known bugs.  
+* If you find a bug, please report it to me at the email address below.  
 
 ## License
-[GPLv3](https://choosealicense.com/licenses/gpl-3.0/)\
-Copyright &copy; 2021 Micah L. Olson
+[GPLv3](https://choosealicense.com/licenses/gpl-3.0/)  
+Copyright &copy; 2021 Micah L. Olson  
 
 ## Contact Information
-Micah Olson micah.olson@protonmail.com
+Micah Olson micah.olson@protonmail.com  
