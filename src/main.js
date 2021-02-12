@@ -13,6 +13,8 @@ function getResult(response, baseValue) {
   if (response.result === 'success') {
     const convertedValue = (baseValue * response.conversion_rate).toFixed(2);
     $('#result').text(`${response.base_code} ${baseValue.toFixed(2)} = ${response.target_code} ${convertedValue}`);
+  } else if (response['error-type'] === 'unsupported-code') {
+    $('#result').text("Sorry, we don't have your target currency in today's data. Please select a different target and try again.");
   } else {
     $('#result').text(`Uh, oh! We ran into a problem -> ${response.message}`);
   }
