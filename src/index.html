@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Exchanger</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Convert U.S. Dollars to Another Currency</h1>
+    <form>
+      <div class="form-group">
+        <label for="amount">Enter an amount:</label>
+        <input type="number" id="amount" step="any">
+      </div>
+
+      <div class="form-group">
+        <select class="custom-select">
+          <option selected>Select a currency</option>
+          <option value="1">Pound Sterling</option>
+          <option value="2">Japanese Yen</option>
+          <option value="3">Euro</option>
+          <option value="4">Indian Rupee</option>
+          <option value="5">Norwegian Krone</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Convert</button>
+    </form>
+    <div id="result">
+      <!-- to be added by main.js -->
+    </div>
+  </div>
+</body>
+
+</html>
