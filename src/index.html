@@ -12,26 +12,38 @@
   <div class="container">
     <h1>Convert U.S. Dollars to Another Currency</h1>
     <form id="value-and-target">
-      <div class="form-group">
-        <label for="amount">Enter an amount:</label>
-        <input type="number" id="base-value" min="0.00" step="0.01" value="0.00">
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="amount">Amount</label>
+          <input type="number" class="form-control" id="base-value" min="0.00" step="0.01"
+            placeholder="Enter an amount">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="base-currency">From</label>
+          <select class="custom-select" id="base-currency" disabled>
+            <option value="USD">USD - U.S. Dollar</option>
+          </select>
+        </div>
+        <div class="form-group col-md-4">
+          <div class="form-group">
+            <label for="target-currency">To</label>
+            <select class="custom-select" id="target-currency">
+              <option>Select a currency</option>
+              <option value="GBP">GBP - British Pound</option>
+              <option value="JPY">JPY - Japanese Yen</option>
+              <option value="EUR">EUR - Euro</option>
+              <option value="INR">INR - Indian Rupee</option>
+              <option value="NOK">NOK - Norwegian Krone</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary" id="btn-convert">Convert</button>
+          </div>
+        </div>
       </div>
-
-      <div class="form-group">
-        <select class="custom-select" id="target-currency">
-          <option>Select a currency</option>
-          <option value="GBP">Pound Sterling</option>
-          <option value="JPY">Japanese Yen</option>
-          <option value="EUR">Euro</option>
-          <option value="INR">Indian Rupee</option>
-          <option value="NOK">Norwegian Krone</option>
-        </select>
-      </div>
-
-      <button type="submit" class="btn btn-primary">Convert</button>
     </form>
 
-    <div class="jumbotron" id="result">
+    <div id="result">
       <!-- to be added by main.js -->
     </div>
 
