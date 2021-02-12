@@ -1,11 +1,26 @@
+body {
+  background-image: url("../assets/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 h1, h2 {
   text-align: center;
+  color: hsl(0, 0%, 100%);
+  text-shadow: 2px 2px hsl(0, 0%, 0%);
+}
+
+.jumbotron {
+  padding-bottom: 0;
+  background-color: hsla(210, 3%, 94%, .8);
 }
 
 #btn-convert {
   float: right;
+  margin-bottom: 4rem;
 }
 
 #results {
   display: none;
+  margin-top: 16px;
 }
