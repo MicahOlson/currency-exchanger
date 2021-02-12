@@ -11,20 +11,20 @@
 <body>
   <div class="container">
     <h1>Convert U.S. Dollars to Another Currency</h1>
-    <form>
+    <form id="value-and-target">
       <div class="form-group">
         <label for="amount">Enter an amount:</label>
-        <input type="number" id="amount" step="any">
+        <input type="number" id="base-value" step="any">
       </div>
 
       <div class="form-group">
-        <select class="custom-select">
+        <select class="custom-select" id="target-currency">
           <option selected>Select a currency</option>
-          <option value="1">Pound Sterling</option>
-          <option value="2">Japanese Yen</option>
-          <option value="3">Euro</option>
-          <option value="4">Indian Rupee</option>
-          <option value="5">Norwegian Krone</option>
+          <option value="GBP">Pound Sterling</option>
+          <option value="JPY">Japanese Yen</option>
+          <option value="EUR">Euro</option>
+          <option value="INR">Indian Rupee</option>
+          <option value="NOK">Norwegian Krone</option>
         </select>
       </div>
 
