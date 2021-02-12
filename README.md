@@ -20,7 +20,7 @@
 This website will convert U.S. dollars to a different global currency using the ExchangeRate-API. Enter a value in U.S. dollars, select a different, global currency from the list provided and click submit.  
 
 ## Setup and Installation
-* To use this application, you will need to **supply your own API key** for the ExchangeRate-API.
+* To use this application, you will need to **acquire your own API key** for the ExchangeRate-API.
   * Go to [ExchangeRate-API](https://www.exchangerate-api.com)'s website
   * Input your email address and click "Get Free Key!"
   * Complete the "Create Account" form by adding your first name and a password
@@ -34,20 +34,22 @@ This website will convert U.S. dollars to a different global currency using the 
   `$ cd ~/[directory]/[path]/[of]/[choice]/`  
   `$ git clone https://github.com/MicahOlson/currency-exchanger.git`  
 
-* Navigate to the top level of the project directory.  
+* **Navigate into the project**. Use `cd` to move to the top level of the project directory.  
   `$ cd currency-exchanger/`   
 
-* *ADD POINTS ABOUT API SIGN-UP, API KEY, CREATING .ENV, ADDING IT TO .GITIGNORE, ETC.*
+* **Make your API key available to the application** and help **keep it secure** by excluding it from `git` tracking.
+  * Create a file called `.env` that holds your key. This can be done with the single command below, replacing the content in brackets with your API key and removing the brackets.  
+    `$ echo "API_KEY=[your-API-key-without-brackets]" > .env`
+  * Add `.env` to the project's `.gitignore` file. Note the use of two angled brackets here `>>` to append the `.gitignore` file, not overwrite it.  
+    `$ echo .env >> .gitignore`  
 
-* *ADD A POINT ABOUT NODE*
-
-* Install all application dependencies using `npm` (node package manager) ([how to install npm](https://www.learnhowtoprogram.com/intermediate-javascript/getting-started-with-javascript/installing-node-js)).  
+* **Install all application dependencies** using `node` and `npm` (node package manager) ([how to install node and npm](https://www.learnhowtoprogram.com/intermediate-javascript/getting-started-with-javascript/installing-node-js)).  
   `$ npm install`
 
-* Then build a distribution bundle by running the following. This will create the version of `index.html` you will access as discussed below.  
+* Then **build a distribution bundle** by running the following. This will create the version of `index.html` you will access as discussed below.  
   `$ npm run build`
 
-* To view the site locally, start the preconfigured development server to automatically launch the site in your default browser.  
+* To view the site locally, **start the preconfigured development server** to automatically launch the site in your default browser.  
   `$ npm run start`
   
   * You could also open the file called `index.html` in the project's `dist/` subdirectory to view a static version.  
