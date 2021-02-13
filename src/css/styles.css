@@ -1,18 +1,19 @@
 body {
   background-image: url("../assets/images/background.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center;
 }
 
-h1, h2 {
+.header {
   text-align: center;
-  color: hsl(0, 0%, 100%);
-  text-shadow: 2px 2px hsl(0, 0%, 0%);
+  margin-bottom: 32px;
+  text-shadow: 2px 2px hsl(0, 100%, 100%);
 }
 
 .jumbotron {
+  margin-top: 32px;
   padding-bottom: 0;
-  background-color: hsla(210, 3%, 94%, .8);
+  background-color: hsla(210, 3%, 94%, 0.8);
 }
 
 #btn-convert {
@@ -20,7 +21,7 @@ h1, h2 {
   margin-bottom: 4rem;
 }
 
-#results {
+#results, #rates {
   display: none;
   margin-top: 16px;
 }

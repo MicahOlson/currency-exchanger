@@ -10,9 +10,12 @@
 
 <body>
   <div class="container">
-    <h1>Currency Exchanger</h1>
-    <h2><small>Convert U.S. Dollars to Another Currency</small></h2>
     <div class="jumbotron">
+      <div class="header">
+        <h1>Currency Exchanger</h1>
+        <h2><small>Convert U.S. Dollars to Another Currency</small></h2>
+      </div>
+      
       <form id="value-and-target">
         <div class="form-row">
           <div class="col-md-4">
@@ -24,18 +27,20 @@
             <div id="results">
               <h6 id="base-result"></h6>
               <h3 id="target-result"></h3>
-              <p>
-                <small id="conversion-rate"></small><br>
-                <small id="reverse-rate"></small>
-              </p>
             </div>
           </div>
+          
           <div class="form-group col-md-4">
             <label for="base-currency">From</label>
             <select class="custom-select" id="base-currency" disabled>
               <option value="USD">USD - U.S. Dollar</option>
             </select>
+            <div id="rates">
+                <small id="conversion-rate"></small><br>
+                <small id="reverse-rate"></small>
+            </div>
           </div>
+          
           <div class="form-group col-md-4">
             <div class="form-group">
               <label for="target-currency">To</label>
@@ -52,6 +57,7 @@
               <button type="submit" class="btn btn-primary" id="btn-convert">Convert</button>
             </div>
           </div>
+
         </div>
       </form>
     </div>
