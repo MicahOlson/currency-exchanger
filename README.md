@@ -10,7 +10,6 @@
 * Bootstrap 4.6
 * JavaScript (ECMAScript 2017)
 * jQuery 3.5.1
-* Popper.js 1.16.1
 * npm 6.14.10
 * webpack 4.39.3
 * ESLint 6.3.1
@@ -18,7 +17,7 @@
 * ExchangeRate-API
 
 ## Description
-This website will convert U.S. dollars to a different global currency using the ExchangeRate-API. Enter a value in U.S. dollars, select a different, global currency from the list provided and click submit.  
+This website will convert U.S. dollars to a different global currency using the ExchangeRate-API. Enter a value in U.S. dollars, select a different, global currency from the list provided and click convert.  
 
 ## Setup and Installation
 * To use this application, you will need to **acquire your own API key** for the ExchangeRate-API.
