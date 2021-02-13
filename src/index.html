@@ -15,7 +15,7 @@
         <h1>Currency Exchanger</h1>
         <h2><small>Convert U.S. Dollars to Another Currency</small></h2>
       </div>
-      
+
       <form id="value-and-target">
         <div class="form-row">
           <div class="col-md-4">
@@ -25,22 +25,30 @@
                 placeholder="Enter an amount">
             </div>
             <div id="results">
-              <h6 id="base-result"></h6>
-              <h3 id="target-result"></h3>
+              <h6 id="base-result">
+                <!-- Base value and currency type from main.js will display here -->
+              </h6>
+              <h3 id="target-result">
+                <!-- Target conversion value and currency type from main.js will display here -->
+              </h3>
             </div>
           </div>
-          
+
           <div class="form-group col-md-4">
             <label for="base-currency">From</label>
             <select class="custom-select" id="base-currency" disabled>
               <option value="USD">USD - U.S. Dollar</option>
             </select>
             <div id="rates">
-                <small id="conversion-rate"></small><br>
-                <small id="reverse-rate"></small>
+              <small id="conversion-rate">
+                <!-- Base-to-target exchange rate from main.js will display here -->
+              </small><br>
+              <small id="reverse-rate">
+                <!-- Target-to-base exchange rate from main.js will display here -->
+              </small>
             </div>
           </div>
-          
+
           <div class="form-group col-md-4">
             <div class="form-group">
               <label for="target-currency">To</label>
@@ -57,9 +65,13 @@
               <button type="submit" class="btn btn-primary" id="btn-convert">Convert</button>
             </div>
           </div>
-
         </div>
       </form>
+
+      <div class="row" id="show-errors">
+        <!-- Error handling from main.js will display here -->
+      </div>
+
     </div>
   </div>
 </body>
