@@ -1,6 +1,6 @@
 # Currency Exchanger
 
-### Convert a value in U.S. dollars to a different global currency.
+### Convert a monetary value from one global currency to another.
 
 ### _By Micah Olson_
 
@@ -18,7 +18,11 @@
 * ExchangeRate-API
 
 ## Description
-This website will convert U.S. dollars to a different global currency using the ExchangeRate-API. Enter a value in U.S. dollars, select a different, global currency from the list provided and click convert.  
+This website will convert various global currencies using the ExchangeRate-API. Enter a value and select the base currency for that value, then select a target currency and click convert.  
+
+<p align="center">
+  <img src="src/assets/images/preview.png" alt="A preview of Currency Exchanger" width="60%">
+</p>
 
 ## Setup and Installation
 * To use this application, you will need to **acquire your own API key** for the ExchangeRate-API.
@@ -51,7 +55,7 @@ This website will convert U.S. dollars to a different global currency using the 
   - If for some reason `.env` is not in `.gitignore`, you should add it by using the command below. Note the use of two angled brackets (`>>`) here to append the `.gitignore` file and not overwrite it  
     >`$ echo .env >> .gitignore`  
 
-* **Install all packages and dependencies** listed in `package.json` using `Node.js` and its package manager `npm` ([how to install node and npm](https://www.learnhowtoprogram.com/intermediate-javascript/getting-started-with-javascript/installing-node-js)).  
+* **Install all packages and dependencies** listed in `package.json` using the `Node.js` package manager `npm`. Install `Node.js` to get `npm` ([how to install node and npm](https://www.learnhowtoprogram.com/intermediate-javascript/getting-started-with-javascript/installing-node-js)).  
   >`$ npm install`  
 
 * Then **build a distribution bundle** by running the following. This will create the version of `index.html` you will access as discussed below.  
