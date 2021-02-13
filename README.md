@@ -10,6 +10,7 @@
 * Bootstrap 4.6
 * JavaScript (ECMAScript 2017)
 * jQuery 3.5.1
+* Node.js 14.15.5
 * npm 6.14.10
 * webpack 4.39.3
 * ESLint 6.3.1
@@ -50,7 +51,7 @@ This website will convert U.S. dollars to a different global currency using the 
   - If for some reason `.env` is not in `.gitignore`, you should add it by using the command below. Note the use of two angled brackets (`>>`) here to append the `.gitignore` file and not overwrite it  
     >`$ echo .env >> .gitignore`  
 
-* **Install all packages and dependencies** listed in `package.json` using `node` and its package manager `npm` ([how to install node and npm](https://www.learnhowtoprogram.com/intermediate-javascript/getting-started-with-javascript/installing-node-js)).  
+* **Install all packages and dependencies** listed in `package.json` using `Node.js` and its package manager `npm` ([how to install node and npm](https://www.learnhowtoprogram.com/intermediate-javascript/getting-started-with-javascript/installing-node-js)).  
   >`$ npm install`  
 
 * Then **build a distribution bundle** by running the following. This will create the version of `index.html` you will access as discussed below.  
