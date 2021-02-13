@@ -8,6 +8,7 @@ function clearPage() {
   $('#base-value').val('');
   $('#target-currency').val('');
   $('#results').hide();
+  $('#rates').hide();
 }
 
 function getResult(response, baseValue) {
@@ -29,7 +30,7 @@ function getResult(response, baseValue) {
 $(document).ready(function() {
   $('form#value-and-target').submit(function(event) {
     event.preventDefault();
-    const baseCurrency = 'USD';
+    const baseCurrency = $('#base-currency').val();
     const baseValue = parseFloat($('#base-value').val());
     const targetCurrency = $('#target-currency').val();
     clearPage();
@@ -38,5 +39,6 @@ $(document).ready(function() {
         getResult(response, baseValue);
       });
     $('#results').show();
+    $('#rates').show();
   });
 });
