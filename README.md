@@ -37,10 +37,17 @@ This website will convert U.S. dollars to a different global currency using the 
 * **Navigate into the project** using `cd` to move to the top level of the project directory.  
   >`$ cd currency-exchanger/`   
 
-* **Make your API key available to the application** and help **keep it secure** by excluding it from `git` tracking and from being pushed to remote repositories.  
+* **Make your API key available to the application** without hardcoding it into any scripts 
   - Create a file called `.env` that holds your key. This can be done with the single command below, replacing the content in brackets with your API key and removing the brackets  
     >`$ echo "API_KEY=[your-API-key-without-brackets]" > .env`  
-  - Add `.env` to the project's `.gitignore` file. Note the use of two angled brackets (`>>`) here to append the `.gitignore` file and not overwrite it  
+  
+  - Note that the API calls in this project use an embedded expression in a *template literal* that references the value in `.env`. Along with `.gitignore` discussed in the next point, this helps **secure the API key** by keeping it out of the application's code. Here is the syntax
+    >`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/...`
+  
+  - The `.gitignore` file included in this project already lists `.env` as one of the files to exclude from `git` tracking, which keeps `.env` out of commits and helps ensure it never gets pushed to a public repository. You can double-check that it is indeed listed by running the following
+    >`$ cat .gitignore`
+  
+  - If for some reason `.env` is not in `.gitignore`, you should add it by using the command below. Note the use of two angled brackets (`>>`) here to append the `.gitignore` file and not overwrite it  
     >`$ echo .env >> .gitignore`  
 
 * **Install all packages and dependencies** listed in `package.json` using `node` and its package manager `npm` ([how to install node and npm](https://www.learnhowtoprogram.com/intermediate-javascript/getting-started-with-javascript/installing-node-js)).  
