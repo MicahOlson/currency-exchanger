@@ -1,7 +1,10 @@
 body {
   background-image: url("../assets/images/background.jpg");
-  background-repeat: no-repeat;
+  background-color: hsl(97.7, 38.7%, 56.5%);
+  height: 1282px;
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .header {
