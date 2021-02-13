@@ -5,10 +5,10 @@
 ### _By Micah Olson_
 
 ## Technologies Used
-* HTML5
-* CSS 2.1
+* HTML
+* CSS
+* JavaScript
 * Bootstrap 4.6
-* JavaScript (ECMAScript 2017)
 * jQuery 3.5.1
 * Node.js 14.15.5
 * npm 6.14.10
