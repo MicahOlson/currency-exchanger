@@ -36,9 +36,9 @@
 
           <div class="form-group col-md-4">
             <label for="base-currency">From</label>
-            <select class="custom-select" id="base-currency">
+            <select class="custom-select" id="base-currency" required>
               <option value="">Select a base currency</option>
-              <!-- Remaining options will be appended by main.js  -->
+              <!-- Remaining <option> elements will be appended by main.js  -->
             </select>
             <div id="rates">
               <small id="conversion-rate">
@@ -53,9 +53,9 @@
           <div class="form-group col-md-4">
             <div class="form-group">
               <label for="target-currency">To</label>
-              <select class="custom-select" id="target-currency">
+              <select class="custom-select" id="target-currency" required>
                 <option value="">Select a target currency</option>
-                <!-- Remaining options will be appended by main.js  -->
+                <!-- Remaining <option> elements will be appended by main.js  -->
               </select>
             </div>
             <div class="form-group">
