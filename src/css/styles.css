@@ -37,3 +37,16 @@ body {
   padding-bottom: 16px;
   color: hsl(0, 100%, 50%);
 }
+
+#disclaimer {
+  color: hsl(0, 0%, 100%);
+  text-shadow: 2px 2px hsl(0, 0%, 0%);
+  font-style: italic;
+  position: fixed;
+  top: auto;
+  bottom: 0;
+}
+
+a#api-home {
+  color: hsl(0, 0%, 100%);
+}
