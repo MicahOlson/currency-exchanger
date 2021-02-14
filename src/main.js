@@ -210,9 +210,14 @@ $(document).ready(function() {
     const baseValue = parseFloat($('#base-value').val());
     const targetCurrency = $('#target-currency').val();
     clearPage();
-    ExchangeService.getExchange(baseCurrency, targetCurrency)
-      .then(function(response) {
-        getResult(response, baseValue);
-      });
+    if (!sessionStorage[`${baseCurrency}->${targetCurrency}`]) {
+      ExchangeService.getExchange(baseCurrency, targetCurrency)
+        .then(function(response) {
+          sessionStorage.setItem(`${response.base_code}->${response.target_code}`, JSON.stringify(response));
+          getResult(response, baseValue);
+        });
+    } else {
+      getResult(JSON.parse(sessionStorage.getItem(`${baseCurrency}->${targetCurrency}`)), baseValue);
+    }
   });
 });
