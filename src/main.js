@@ -23,13 +23,13 @@ function getResult(response, baseValue) {
     $('#results').show();
     $('#rates').show();
   } else if (response['error-type'] === 'unsupported-code') {
-    $('#show-errors').text("Sorry, we don't have your target currency in today's data. Please select a different target and try again.");
+    $('#show-errors').text("Sorry, we don't have this exchange in today's data. Please select different currencies and try again.");
     $('#show-errors').show();
   } else if (response.result === 'error') {
-    $('#show-errors').text(`Uh, oh! We ran into a problem -> ${response['error-type']}`);
+    $('#show-errors').text(`Uh, oh - we ran into a problem! -> ${response['error-type']}`);
     $('#show-errors').show();
   } else {
-    $('#show-errors').text(`Uh, oh! We ran into a problem -> ${response.message}`);
+    $('#show-errors').text(`Uh, oh - we ran into a problem! -> ${response.message}`);
     $('#show-errors').show();
   }
 }
