@@ -13,23 +13,30 @@ function clearPage() {
   $('#show-errors').hide();
 }
 
-function getResult(response, baseValue) {
+function getResult(response, baseAmount) {
   if (response.result === 'success') {
-    const conversion = (baseValue * response.conversion_rate).toFixed(2);
-    $('#base-result').text(`${baseValue.toFixed(2)} ${response.base_code} = `);
-    $('#target-result').text(`${conversion} ${response.target_code}`);
-    $('#conversion-rate').text(`1 ${response.base_code} = ${response.conversion_rate.toFixed(4)} ${response.target_code}`);
-    $('#reverse-rate').text(`1 ${response.target_code} = ${(1 / response.conversion_rate).toFixed(4)} ${response.base_code}`);
+    const baseCurrency = response.base_code;
+    const baseValue = baseAmount.toFixed(2);
+    const targetCurrency = response.target_code;
+    const targetValue = (baseAmount * response.conversion_rate).toFixed(2);
+    const exchangeRate = response.conversion_rate.toFixed(4);
+    const reverseRate = (1 / response.conversion_rate).toFixed(4);
+
+    $('#base-result').text(`${baseValue} ${baseCurrency} = `);
+    $('#target-result').text(`${targetValue} ${targetCurrency}`);
+    $('#conversion-rate').text(`1 ${baseCurrency} = ${exchangeRate} ${targetCurrency}`);
+    $('#reverse-rate').text(`1 ${targetCurrency} = ${reverseRate} ${baseCurrency}`);
     $('#results').show();
     $('#rates').show();
+
   } else if (response['error-type'] === 'unsupported-code') {
-    $('#show-errors').text("Sorry, we don't have this exchange in today's data. Please select different currencies and try again.");
+    $('#show-errors').text("*** Sorry, we don't have this exchange in today's data. Please select different currencies and try again. ***");
     $('#show-errors').show();
   } else if (response.result === 'error') {
-    $('#show-errors').text(`Uh, oh - we ran into a problem! -> ${response['error-type']}`);
+    $('#show-errors').text(`*** Uh, oh - we ran into a problem! -> ${response['error-type']} ***`);
     $('#show-errors').show();
   } else {
-    $('#show-errors').text(`Uh, oh - we ran into a problem! -> ${response.message}`);
+    $('#show-errors').text(`*** Uh, oh - we ran into a problem! -> ${response.message} ***`);
     $('#show-errors').show();
   }
 }
@@ -204,7 +211,7 @@ function makeSelectBoxes() {
 
 $(document).ready(function() {
   makeSelectBoxes();
-  $('form#value-and-target').submit(function(event) {
+  $('form#user-input').submit(function(event) {
     event.preventDefault();
     const baseCurrency = $('#base-currency').val();
     const baseValue = parseFloat($('#base-value').val());
