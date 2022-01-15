@@ -2,20 +2,20 @@
 
 ### Convert a monetary value from one global currency to another.
 
-### _By Micah Olson_
+### _By Micah L. Olson_
 
 ## Technologies Used
+* npm
+* webpack
 * HTML
 * CSS
+* Bootstrap
 * JavaScript
-* Bootstrap 4.6
-* jQuery 3.5.1
-* Node.js 14.15.5
-* npm 6.14.10
-* webpack 4.39.3
-* ESLint 6.3.1
-* Markdown 1.0.1
+* jQuery
 * ExchangeRate-API
+* ESLint
+* Markdown
+* git
 
 ## Description
 This website will convert various global currencies using the ExchangeRate-API. Enter a value and select the base currency for that value, then select a target currency and click convert.  
@@ -80,8 +80,7 @@ This website will convert various global currencies using the ExchangeRate-API. 
 * If you find a bug, please report it to me at the email address below.  
 
 ## License
-[GPLv3](https://choosealicense.com/licenses/gpl-3.0/)  
-Copyright &copy; 2021 Micah L. Olson  
+[MIT](LICENSE) - Copyright &copy; 2021 Micah L. Olson  
 
 ## Contact Information
-Micah Olson micah.olson@protonmail.com  
+micah.olson@protonmail.com
